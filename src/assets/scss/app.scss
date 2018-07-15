@@ -57,8 +57,9 @@ a.button {
   font-weight: bold;
 }
 
-#header {
+body {
   border-top: 6px solid $black;
+  border-bottom: 11px solid $black;
 }
 
 .menu a {
@@ -66,11 +67,53 @@ a.button {
   font-size: 0.9375rem;
 }
 
-.menu.vertical li.divider {
+.divider {
   border-bottom: 1px dotted $black;
 }
 
 .menu-list li a:after {
   content: '/';
   margin: 0 0.16rem;
+}
+
+.product {
+  position: relative;
+}
+
+.product .new,
+.product .promo {
+  position: absolute;
+}
+
+.product .promo {
+  display: none;
+  background: $black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.product .promo i {
+  float: right;
+}
+
+.product .promo:hover {
+  background: $primary-color;
+  cursor: pointer;
+}
+
+.product:hover .promo {
+  display: block;
+}
+
+.product img.hover {
+  display: none;
+}
+
+.product:hover img.normal {
+  display: none;
+}
+
+.product:hover img.hover {
+  display: block;
 }
