@@ -47,7 +47,7 @@
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 
-// @include foundation-prototype-classes;
+@include foundation-prototype-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
@@ -59,4 +59,18 @@ a.button {
 
 #header {
   border-top: 6px solid $black;
+}
+
+.menu a {
+  font-family: Libre Franklin;
+  font-size: 0.9375rem;
+}
+
+.menu.vertical li.divider {
+  border-bottom: 1px dotted $black;
+}
+
+.menu-list li a:after {
+  content: '/';
+  margin: 0 0.16rem;
 }
